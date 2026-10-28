@@ -11,18 +11,20 @@
 </defs>
 
   <g transform="rotate(-5 120 120)">
-  <circle cx="72" cy="68" r="30" fill="#FFFFFF" stroke="#2E3A59" stroke-width="5"/>
-  <circle cx="168" cy="68" r="30" fill="#FFFFFF" stroke="#2E3A59" stroke-width="5"/>
-  <circle cx="72" cy="68" r="13" fill="rgb(255,255,255)"/>
-  <circle cx="168" cy="68" r="13" fill="rgb(255,255,255)"/>
+  <g transform="rotate(-12 72 68)"><circle cx="72" cy="68" r="30" fill="#FFFFFF" stroke="#2E3A59" stroke-width="5"/><circle cx="72" cy="68" r="13" fill="rgb(255,255,255)"/></g>
+  <g transform="rotate(12 168 68)"><circle cx="168" cy="68" r="30" fill="#FFFFFF" stroke="#2E3A59" stroke-width="5"/><circle cx="168" cy="68" r="13" fill="rgb(255,255,255)"/></g>
   <circle cx="120" cy="135" r="74" fill="#FFFFFF" stroke="#2E3A59" stroke-width="6"/>
   <ellipse cx="120" cy="160" rx="40" ry="30" fill="rgb(255,255,255)" stroke="#2E3A59" stroke-width="5"/>
-  <circle cx="96" cy="118" r="9" fill="#2E3A59"/>
-  <circle cx="144" cy="118" r="9" fill="#2E3A59"/>
+  <ellipse cx="96" cy="118" rx="11" ry="6" fill="#2E3A59"/>
+  <ellipse cx="144" cy="118" rx="11" ry="6" fill="#2E3A59"/>
   <ellipse cx="120" cy="153" rx="10" ry="8" fill="#2E3A59"/>
-  <path d="M120 161 Q120 170 106 172" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M120 161 Q120 170 134 172" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="120" cy="172" rx="7.5" ry="9" fill="#2E3A59"/>
   </g>
-  <path d="M26 100 L58 96" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M20 122 L54 122" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M26 144 L58 148" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  
+  <path d="M26 100 L58 96" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M20 122 L54 122" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M26 144 L58 148" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  
+  
   
 </svg>

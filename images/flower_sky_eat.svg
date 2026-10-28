@@ -20,8 +20,14 @@
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#4FC3F7" stroke="#2E3A59" stroke-width="4" transform="rotate(240 120 120)"/>
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#4FC3F7" stroke="#2E3A59" stroke-width="4" transform="rotate(300 120 120)"/>
   <circle cx="120" cy="120" r="30" fill="#FDD835" stroke="#2E3A59" stroke-width="5"/>
-  <circle cx="112" cy="115" r="4" fill="#2E3A59"/><circle cx="128" cy="115" r="4" fill="#2E3A59"/><path d="M110 128 Q120 134 130 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M108 114 Q112 110 116 114" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M108 114 Q112 118 116 114" fill="#2E3A59" opacity="0.85"/><path d="M124 114 Q128 110 132 114" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M124 114 Q128 118 132 114" fill="#2E3A59" opacity="0.85"/><ellipse cx="120" cy="130.85" rx="7.3500000000000005" ry="5.95" fill="#2E3A59"/>
+              <ellipse cx="120" cy="129.1" rx="7.3500000000000005" ry="2.1" fill="#fff" opacity="0.9"/>
   </g>
-  <path d="M120,110 Q131,126 120,138 Q109,126 120,110 Z" fill="#4FC3F7" stroke="#2E3A59" stroke-width="3"/>
+  
+  
+  
+  <path d="M120,108 Q131,124 120,136 Q109,124 120,108 Z" fill="#4FC3F7" stroke="#2E3A59" stroke-width="3"/>
   
 </svg>

@@ -11,18 +11,20 @@
 </defs>
 
   <g transform="rotate(-5 120 120)">
-  <polygon points="72,70 100,95 55,100" fill="#8D6E63" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
-  <polygon points="168,70 140,95 185,100" fill="#8D6E63" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
-  <polygon points="80,78 96,96 70,96" fill="rgb(187,168,161)"/>
-  <polygon points="160,78 144,96 170,96" fill="rgb(187,168,161)"/>
+  <g transform="rotate(-14 72 85)"><polygon points="72,70 100,95 55,100" fill="#8D6E63" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/><polygon points="80,78 96,96 70,96" fill="rgb(187,168,161)"/></g>
+  <g transform="rotate(14 168 85)"><polygon points="168,70 140,95 185,100" fill="#8D6E63" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/><polygon points="160,78 144,96 170,96" fill="rgb(187,168,161)"/></g>
   <circle cx="120" cy="138" r="68" fill="#8D6E63" stroke="#2E3A59" stroke-width="6"/>
-  <circle cx="98" cy="128" r="8" fill="#2E3A59"/>
-  <circle cx="142" cy="128" r="8" fill="#2E3A59"/>
+  <ellipse cx="98" cy="128" rx="10" ry="5" fill="#2E3A59"/>
+  <ellipse cx="142" cy="128" rx="10" ry="5" fill="#2E3A59"/>
   <polygon points="113,152 127,152 120,162" fill="#2E3A59"/>
-  <path d="M60,150 L30,146 M60,158 L30,158 M180,150 L210,146 M180,158 L210,158"
-        stroke="#2E3A59" stroke-width="4" stroke-linecap="round"/>
-  <path d="M105 170 Q120 178 135 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M58,148 L28,140 M58,156 L28,152 M182,148 L212,140 M182,156 L212,152" stroke="#2E3A59" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="120" cy="175" rx="7.5" ry="9" fill="#2E3A59"/>
   </g>
-  <path d="M26 100 L58 96" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M20 122 L54 122" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M26 144 L58 148" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  
+  <path d="M26 100 L58 96" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M20 122 L54 122" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M26 144 L58 148" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  
+  
   
 </svg>

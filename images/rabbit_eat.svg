@@ -11,19 +11,23 @@
 </defs>
 
   <g>
-  <ellipse cx="95" cy="55" rx="20" ry="52" fill="#F5F0E6" stroke="#2E3A59" stroke-width="5"/>
-  <ellipse cx="145" cy="55" rx="20" ry="52" fill="#F5F0E6" stroke="#2E3A59" stroke-width="5"/>
-  <ellipse cx="95" cy="58" rx="10" ry="38" fill="#F7B6C2"/>
-  <ellipse cx="145" cy="58" rx="10" ry="38" fill="#F7B6C2"/>
+  <g><ellipse cx="95" cy="55" rx="20" ry="52" fill="#F5F0E6" stroke="#2E3A59" stroke-width="5"/><ellipse cx="95" cy="58" rx="10" ry="38" fill="#F7B6C2"/></g>
+  <g><ellipse cx="145" cy="55" rx="20" ry="52" fill="#F5F0E6" stroke="#2E3A59" stroke-width="5"/><ellipse cx="145" cy="58" rx="10" ry="38" fill="#F7B6C2"/></g>
   <circle cx="120" cy="145" r="66" fill="#F5F0E6" stroke="#2E3A59" stroke-width="6"/>
-  <circle cx="98" cy="135" r="8" fill="#2E3A59"/>
-  <circle cx="142" cy="135" r="8" fill="#2E3A59"/>
-  <ellipse cx="120" cy="156" rx="7" ry="6" fill="#E8899A"/>
+  <path d="M90 135 Q98 131 106 135" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M90 135 Q98 143 106 135" fill="#2E3A59" opacity="0.85"/>
+  <path d="M134 135 Q142 131 150 135" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M134 135 Q142 143 150 135" fill="#2E3A59" opacity="0.85"/>
   <circle cx="88" cy="155" r="10" fill="rgb(208,204,196)" opacity="0.5"/>
   <circle cx="152" cy="155" r="10" fill="rgb(208,204,196)" opacity="0.5"/>
-  <path d="M106 163 Q120 172 134 163" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="120" cy="150" rx="7" ry="6" fill="#E8899A"/>
+  <ellipse cx="120" cy="169.7" rx="14.700000000000001" ry="11.9" fill="#2E3A59"/>
+              <ellipse cx="120" cy="166.2" rx="14.700000000000001" ry="4.2" fill="#fff" opacity="0.9"/>
   </g>
-  <ellipse cx="120" cy="167" rx="10" ry="8" fill="#2E3A59"/><g transform="translate(120,181) rotate(100)">
+  
+  
+  
+  <g transform="translate(120,186) rotate(100)">
         <path d="M0,-18 L7,13 Q0,19 -7,13 Z" fill="#FB8C00" stroke="#2E3A59" stroke-width="3" stroke-linejoin="round"/>
         <path d="M-3,-18 L-1,-29 M3,-18 L7,-27 M0,-18 L0,-30" stroke="#43A047" stroke-width="3" stroke-linecap="round" fill="none"/>
       </g>

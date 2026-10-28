@@ -11,18 +11,20 @@
 </defs>
 
   <g>
-  <polygon points="72,70 100,95 55,100" fill="#FDD835" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
-  <polygon points="168,70 140,95 185,100" fill="#FDD835" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
-  <polygon points="80,78 96,96 70,96" fill="rgb(254,232,134)"/>
-  <polygon points="160,78 144,96 170,96" fill="rgb(254,232,134)"/>
+  <g><polygon points="72,70 100,95 55,100" fill="#FDD835" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/><polygon points="80,78 96,96 70,96" fill="rgb(254,232,134)"/></g>
+  <g><polygon points="168,70 140,95 185,100" fill="#FDD835" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/><polygon points="160,78 144,96 170,96" fill="rgb(254,232,134)"/></g>
   <circle cx="120" cy="138" r="68" fill="#FDD835" stroke="#2E3A59" stroke-width="6"/>
-  <circle cx="98" cy="128" r="8" fill="#2E3A59"/>
-  <circle cx="142" cy="128" r="8" fill="#2E3A59"/>
+  <path d="M89 128 Q98 135 107 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M133 128 Q142 135 151 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
   <polygon points="113,152 127,152 120,162" fill="#2E3A59"/>
-  <path d="M60,150 L30,146 M60,158 L30,158 M180,150 L210,146 M180,158 L210,158"
-        stroke="#2E3A59" stroke-width="4" stroke-linecap="round"/>
-  <path d="M105 170 Q120 178 135 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M60,150 L30,146 M60,158 L30,158 M180,150 L210,146 M180,158 L210,158" stroke="#2E3A59" stroke-width="4" stroke-linecap="round"/>
+  <path d="M111 170 Q120 173 129 170" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
   </g>
-  <circle cx="98" cy="128" r="11" fill="#FDD835"/><path d="M89 128 Q98 134 107 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="142" cy="128" r="11" fill="#FDD835"/><path d="M133 128 Q142 134 151 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
+  <text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text>
+  <text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text>
+  <text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
+  
+  
+  
   
 </svg>

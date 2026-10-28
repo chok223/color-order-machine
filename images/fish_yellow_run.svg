@@ -20,10 +20,14 @@
   <path d="M122,146 C134,144 148,148 156,160 C144,160 132,158 122,154 C120,151 120,148 122,146 Z"
         fill="rgb(202,173,42)" stroke="#2E3A59" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
   <path d="M106 96 Q116 116 106 136" stroke="#2E3A59" stroke-width="3" fill="none" opacity="0.4"/>
-  <circle cx="90" cy="106" r="11" fill="#fff" stroke="#2E3A59" stroke-width="3"/>
-  <circle cx="87" cy="106" r="5.5" fill="#2E3A59"/>
-  <path d="M60 120 Q74 131 90 122" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="90" cy="106" r="11" fill="#fff" stroke="#2E3A59" stroke-width="3"/><circle cx="85" cy="106" r="5.5" fill="#2E3A59"/>
+  <ellipse cx="75" cy="129" rx="7.5" ry="9" fill="#2E3A59"/>
   </g>
-  <path d="M26 100 L58 96" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M20 122 L54 122" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M26 144 L58 148" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  
+  <path d="M26 100 L58 96" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M20 122 L54 122" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M26 144 L58 148" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  
+  
   
 </svg>

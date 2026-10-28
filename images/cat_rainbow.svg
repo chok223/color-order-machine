@@ -11,18 +11,18 @@
 </defs>
 
   <g>
-  <polygon points="72,70 100,95 55,100" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
-  <polygon points="168,70 140,95 185,100" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
-  <polygon points="80,78 96,96 70,96" fill="#FBE4F3"/>
-  <polygon points="160,78 144,96 170,96" fill="#FBE4F3"/>
+  <g><polygon points="72,70 100,95 55,100" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/><polygon points="80,78 96,96 70,96" fill="#FBE4F3"/></g>
+  <g><polygon points="168,70 140,95 185,100" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/><polygon points="160,78 144,96 170,96" fill="#FBE4F3"/></g>
   <circle cx="120" cy="138" r="68" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="6"/>
   <circle cx="98" cy="128" r="8" fill="#2E3A59"/>
   <circle cx="142" cy="128" r="8" fill="#2E3A59"/>
   <polygon points="113,152 127,152 120,162" fill="#2E3A59"/>
-  <path d="M60,150 L30,146 M60,158 L30,158 M180,150 L210,146 M180,158 L210,158"
-        stroke="#2E3A59" stroke-width="4" stroke-linecap="round"/>
-  <path d="M105 170 Q120 178 135 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M60,150 L30,146 M60,158 L30,158 M180,150 L210,146 M180,158 L210,158" stroke="#2E3A59" stroke-width="4" stroke-linecap="round"/>
+  <path d="M105 170 Q120 178.25 135 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
   </g>
+  
+  
+  
   
   
 </svg>

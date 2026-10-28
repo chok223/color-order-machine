@@ -11,16 +11,21 @@
 </defs>
 
   <g>
-  <ellipse cx="78" cy="78" rx="26" ry="34" fill="rgb(161,126,83)" stroke="#2E3A59" stroke-width="5"/>
-  <ellipse cx="162" cy="78" rx="26" ry="34" fill="rgb(161,126,83)" stroke="#2E3A59" stroke-width="5"/>
+  <ellipse cx="78" cy="78" rx="26" ry="34" fill="rgb(161,126,83)" stroke="#2E3A59" stroke-width="5" transform="rotate(10 78 78)"/>
+  <ellipse cx="162" cy="78" rx="26" ry="34" fill="rgb(161,126,83)" stroke="#2E3A59" stroke-width="5" transform="rotate(-10 162 78)"/>
   <circle cx="120" cy="128" r="72" fill="#D7A86E" stroke="#2E3A59" stroke-width="6"/>
   <ellipse cx="120" cy="158" rx="38" ry="28" fill="rgb(229,198,161)" stroke="#2E3A59" stroke-width="5"/>
-  <circle cx="97" cy="112" r="9" fill="#2E3A59"/>
-  <circle cx="143" cy="112" r="9" fill="#2E3A59"/>
+  <path d="M87 112 Q97 120 107 112" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M133 112 Q143 120 153 112" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
   <ellipse cx="120" cy="150" rx="9" ry="7" fill="#2E3A59"/>
-  <path d="M120 157 Q120 168 105 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M120 157 Q120 168 135 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M111.6 163 Q120 166 128.4 163" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
   </g>
-  <circle cx="97" cy="112" r="12" fill="#D7A86E"/><path d="M88 112 Q97 118 106 112" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="143" cy="112" r="12" fill="#D7A86E"/><path d="M134 112 Q143 118 152 112" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
+  <text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text>
+  <text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text>
+  <text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
+  
+  
+  
   
 </svg>

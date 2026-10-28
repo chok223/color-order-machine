@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+<defs>
+  <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#E53935"/>
+    <stop offset="20%" stop-color="#FB8C00"/>
+    <stop offset="40%" stop-color="#FDD835"/>
+    <stop offset="60%" stop-color="#43A047"/>
+    <stop offset="80%" stop-color="#1E88E5"/>
+    <stop offset="100%" stop-color="#8E24AA"/>
+  </linearGradient>
+</defs>
+
+  <g>
+  <ellipse cx="108" cy="70" rx="8" ry="15" fill="#43A047" stroke="#2E3A59" stroke-width="4" transform="rotate(55 108 70)"/>
+  <circle cx="120" cy="130" r="70" fill="#43A047" stroke="#2E3A59" stroke-width="6"/>
+  <path d="M58,135 Q40,150 55,165" fill="none" stroke="#2E3A59" stroke-width="4" opacity="0.5"/>
+  <path d="M91 118 Q100 125 109 118" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M129 118 Q138 125 147 118" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <polygon points="113,140 131,138 113,146" fill="#FB8C00" stroke="#2E3A59" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+  <text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text>
+  <text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text>
+  <text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
+  
+  
+  
+  
+</svg>

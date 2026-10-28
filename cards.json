@@ -9,9 +9,9 @@
         { "id": "rabbit", "name": "토끼" },
         { "id": "bear", "name": "곰" },
         { "id": "fish", "name": "물고기" },
-        { "id": "car", "name": "자동차" },
-        { "id": "ball", "name": "공" },
-        { "id": "flower", "name": "꽃" }
+        { "id": "lion", "name": "사자" },
+        { "id": "pig", "name": "돼지" },
+        { "id": "chick", "name": "병아리" }
       ]
     },
     {

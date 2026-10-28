@@ -15,10 +15,8 @@
   <g><circle cx="168" cy="68" r="30" fill="#FFFFFF" stroke="#2E3A59" stroke-width="5"/><circle cx="168" cy="68" r="13" fill="rgb(255,255,255)"/></g>
   <circle cx="120" cy="135" r="74" fill="#FFFFFF" stroke="#2E3A59" stroke-width="6"/>
   <ellipse cx="120" cy="160" rx="40" ry="30" fill="rgb(255,255,255)" stroke="#2E3A59" stroke-width="5"/>
-  <path d="M87 118 Q96 114 105 118" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <path d="M87 118 Q96 127 105 118" fill="#2E3A59" opacity="0.85"/>
-  <path d="M135 118 Q144 114 153 118" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <path d="M135 118 Q144 127 153 118" fill="#2E3A59" opacity="0.85"/>
+  <path d="M85 121 Q96 107 107 121" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M133 121 Q144 107 155 121" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
   <ellipse cx="120" cy="149" rx="10" ry="8" fill="#2E3A59"/>
   <ellipse cx="120" cy="171.25" rx="15.75" ry="12.75" fill="#2E3A59"/>
               <ellipse cx="120" cy="167.5" rx="15.75" ry="4.5" fill="#fff" opacity="0.9"/>
@@ -26,7 +24,7 @@
   
   
   
-  <g transform="translate(120,183)">
+  <circle cx="90" cy="157" r="8" fill="#F7A8B8" opacity="0.7"/><circle cx="150" cy="157" r="8" fill="#F7A8B8" opacity="0.7"/><g transform="translate(120,183)">
         <path d="M-14,-4 Q-14,14 0,16 Q14,14 14,-4 Z" fill="#D9A441" stroke="#2E3A59" stroke-width="3"/>
         <ellipse cx="0" cy="-5" rx="14" ry="4" fill="#B5791F" stroke="#2E3A59" stroke-width="3"/>
       </g>

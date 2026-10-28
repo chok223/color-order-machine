@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+<defs>
+  <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#E53935"/>
+    <stop offset="20%" stop-color="#FB8C00"/>
+    <stop offset="40%" stop-color="#FDD835"/>
+    <stop offset="60%" stop-color="#43A047"/>
+    <stop offset="80%" stop-color="#1E88E5"/>
+    <stop offset="100%" stop-color="#8E24AA"/>
+  </linearGradient>
+</defs>
+
+  <g>
+  <path d="M217.5,123.4 Q228.0,135.0 217.5,146.6 Q206.9,158.3 210.2,173.6 Q213.5,189.0 198.6,193.8 Q183.6,198.6 178.8,213.6 Q174.0,228.5 158.6,225.2 Q143.3,221.9 131.6,232.5 Q120.0,243.0 108.4,232.5 Q96.7,221.9 81.4,225.2 Q66.0,228.5 61.2,213.6 Q56.4,198.6 41.4,193.8 Q26.5,189.0 29.8,173.6 Q33.1,158.3 22.5,146.6 Q12.0,135.0 22.5,123.4 Q33.1,111.7 29.8,96.4 Q26.5,81.0 41.4,76.2 Q56.4,71.4 61.2,56.4 Q66.0,41.5 81.4,44.8 Q96.7,48.1 108.4,37.5 Q120.0,27.0 131.6,37.5 Q143.3,48.1 158.6,44.8 Q174.0,41.5 178.8,56.4 Q183.6,71.4 198.6,76.2 Q213.5,81.0 210.2,96.4 Z" fill="#6A3D8F" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="120" cy="135" r="74" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="6"/>
+  <ellipse cx="120" cy="160" rx="38" ry="27" fill="#FBE4F3" stroke="#2E3A59" stroke-width="5"/>
+  <path d="M86 118 Q96 126 106 118" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M134 118 Q144 126 154 118" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <ellipse cx="120" cy="153" rx="9" ry="7" fill="#2E3A59"/>
+  <path d="M111.6 167 Q120 170 128.4 167" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text>
+  <text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text>
+  <text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
+  
+  
+  
+  
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+<defs>
+  <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#E53935"/>
+    <stop offset="20%" stop-color="#FB8C00"/>
+    <stop offset="40%" stop-color="#FDD835"/>
+    <stop offset="60%" stop-color="#43A047"/>
+    <stop offset="80%" stop-color="#1E88E5"/>
+    <stop offset="100%" stop-color="#8E24AA"/>
+  </linearGradient>
+</defs>
+
+  <circle cx="120" cy="120" r="96" fill="#A7D8B5" stroke="#2E3A59" stroke-width="6"/>
+  <circle cx="100" cy="45" r="16" fill="#2E3A59"/>
+  <path d="M100 62 L118 108 L94 138 L100 184" stroke="#2E3A59" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M118 108 L150 126 L172 108" stroke="#2E3A59" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 184 L78 208" stroke="#2E3A59" stroke-width="10" stroke-linecap="round"/>
+  <path d="M100 184 L130 202" stroke="#2E3A59" stroke-width="10" stroke-linecap="round"/>
+  <path d="M40 100 L64 96 M34 120 L60 120 M40 142 L64 138" stroke="#2E3A59" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  
+</svg>

@@ -23,9 +23,23 @@
         { "id": "yellow", "name": "노랑", "en": "Yellow", "hex": "#FDD835" },
         { "id": "green", "name": "초록", "en": "Green", "hex": "#43A047" },
         { "id": "blue", "name": "파랑", "en": "Blue", "hex": "#1E88E5" },
+        { "id": "sky", "name": "하늘색", "en": "Sky Blue", "hex": "#4FC3F7" },
         { "id": "purple", "name": "보라", "en": "Purple", "hex": "#8E24AA" },
         { "id": "pink", "name": "분홍", "en": "Pink", "hex": "#EC407A" },
+        { "id": "brown", "name": "갈색", "en": "Brown", "hex": "#8D6E63" },
+        { "id": "black", "name": "검정", "en": "Black", "hex": "#333333" },
+        { "id": "white", "name": "흰색", "en": "White", "hex": "#FFFFFF" },
         { "id": "rainbow", "name": "무지개", "en": "Rainbow", "hex": "rainbow" }
+      ]
+    },
+    {
+      "id": "action",
+      "label": "③ 뭐 해요?",
+      "cards": [
+        { "id": "sleep", "name": "자는" },
+        { "id": "smile", "name": "웃는" },
+        { "id": "run", "name": "뛰는" },
+        { "id": "eat", "name": "먹는" }
       ]
     }
   ]

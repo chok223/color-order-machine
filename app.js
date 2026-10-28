@@ -8,7 +8,7 @@ let cardsData = null;      // cards.json 내용
 let settings = loadSettings();
 let logs = loadLogs();
 
-let order = { what: null, color: null };
+let order = { what: null, color: null, action: null };
 let currentShown = null;   // 화면에 떠 있는 가장 최근 그림 정보
 let speechReady = false;
 
@@ -29,7 +29,7 @@ function defaultSettings() {
   return {
     visibility: {},       // { stepId: [cardId, ...] } 비어 있으면 전체 보임
     simpleMode: false,
-    simplePreset: { what: null, color: null },
+    simplePreset: { what: null, color: null, action: null },
     sound: false
   };
 }
@@ -145,6 +145,7 @@ function buildCardEl(step, card) {
     } else {
       el.style.background = card.hex;
       if (isLightColor(card.hex)) el.classList.add('light-text-dark');
+      if (card.hex.toUpperCase() === '#FFFFFF') el.classList.add('white-card');
     }
     const nameEl = document.createElement('span');
     nameEl.textContent = card.name;
@@ -208,7 +209,7 @@ function renderSlots() {
       swatch.style.width = '34px';
       swatch.style.height = '34px';
       swatch.style.borderRadius = '50%';
-      swatch.style.border = '2px solid rgba(0,0,0,.15)';
+      swatch.style.border = card.hex.toUpperCase() === '#FFFFFF' ? '2px solid #2E3A59' : '2px solid rgba(0,0,0,.2)';
       if (card.id === 'rainbow') {
         swatch.style.background = 'linear-gradient(135deg,#E53935,#FB8C00,#FDD835,#43A047,#1E88E5,#8E24AA)';
       } else {
@@ -254,9 +255,11 @@ function updateOrderButton() {
 
 // ---------- 주문하기 / 그림 ----------
 
-function resolveImagePath(whatId, colorId) {
-  if (colorId) return `images/${whatId}_${colorId}.${IMAGE_EXT}`;
-  return `images/${whatId}.${IMAGE_EXT}`;
+function resolveImagePath(whatId, colorId, actionId) {
+  let name = whatId;
+  if (colorId) name += `_${colorId}`;
+  if (actionId) name += `_${actionId}`;
+  return `images/${name}.${IMAGE_EXT}`;
 }
 
 function tryLoadImage(src) {
@@ -271,18 +274,20 @@ function tryLoadImage(src) {
 async function placeOrder() {
   const whatId = settings.simpleMode ? settings.simplePreset.what : order.what;
   const colorId = settings.simpleMode ? settings.simplePreset.color : order.color;
+  const actionId = settings.simpleMode ? settings.simplePreset.action : order.action;
   if (!whatId) return;
 
   const whatCard = cardById('what', whatId);
   const colorCard = colorId ? cardById('color', colorId) : null;
+  const actionCard = actionId ? cardById('action', actionId) : null;
 
-  const comboSrc = resolveImagePath(whatId, colorId);
-  const baseSrc = resolveImagePath(whatId, null);
+  const comboSrc = resolveImagePath(whatId, colorId, actionId);
+  const baseSrc = resolveImagePath(whatId, null, null);
 
   let finalSrc = baseSrc;
   let fallback = false;
 
-  if (colorId) {
+  if (colorId || actionId) {
     const ok = await tryLoadImage(comboSrc);
     if (ok) {
       finalSrc = comboSrc;
@@ -302,12 +307,12 @@ async function placeOrder() {
     src: finalSrc,
     fallback,
     borderColor: colorCard && colorCard.id !== 'rainbow' ? colorCard.hex : (colorCard ? 'rainbow' : null),
-    label: whatCard.name + (colorCard ? ' · ' + colorCard.name : '')
+    label: [whatCard.name, colorCard?.name, actionCard?.name].filter(Boolean).join(' · ')
   };
   renderResultSlot($('#newResult'), shown, true);
   currentShown = shown;
 
-  addLog(whatCard, colorCard);
+  addLog(whatCard, colorCard, actionCard);
 
   if (settings.sound && colorCard) {
     speakColor(colorCard);
@@ -340,7 +345,7 @@ function renderResultSlot(slotEl, info, animate) {
 }
 
 function resetAll() {
-  order = { what: null, color: null };
+  order = { what: null, color: null, action: null };
   currentShown = null;
   renderPicker();
   renderSlots();
@@ -374,16 +379,22 @@ function speakColor(colorCard) {
 
 // ---------- 기록 ----------
 
-function addLog(whatCard, colorCard) {
+function addLog(whatCard, colorCard, actionCard) {
   logs.push({
     t: new Date().toISOString(),
     what: whatCard.id,
     whatName: whatCard.name,
     color: colorCard ? colorCard.id : null,
-    colorName: colorCard ? colorCard.name : null
+    colorName: colorCard ? colorCard.name : null,
+    action: actionCard ? actionCard.id : null,
+    actionName: actionCard ? actionCard.name : null
   });
   saveLogs();
   refreshLogView();
+}
+
+function logLineText(l) {
+  return [l.whatName, l.colorName, l.actionName].filter(Boolean).join(' + ');
 }
 
 function refreshLogView() {
@@ -403,34 +414,32 @@ function refreshLogView() {
     (byDate[d] = byDate[d] || []).push(l);
   });
 
-  const colorCount = {};
-  logs.forEach(l => {
-    if (l.colorName) colorCount[l.colorName] = (colorCount[l.colorName] || 0) + 1;
-  });
-  let topColor = null, topCount = 0;
-  Object.entries(colorCount).forEach(([name, c]) => {
-    if (c > topCount) { topColor = name; topCount = c; }
-  });
-  summaryEl.innerHTML = topColor
-    ? `전체 ${logs.length}번 주문 · 가장 많이 고른 색: ${topColor} (${topCount}번)`
-    : `전체 ${logs.length}번 주문`;
+  const topOf = (field) => {
+    const count = {};
+    logs.forEach(l => { if (l[field]) count[l[field]] = (count[l[field]] || 0) + 1; });
+    let top = null, topCount = 0;
+    Object.entries(count).forEach(([name, c]) => { if (c > topCount) { top = name; topCount = c; } });
+    return top ? `${top} (${topCount}번)` : null;
+  };
+  const topColor = topOf('colorName');
+  const topAction = topOf('actionName');
+  const bits = [`전체 ${logs.length}번 주문`];
+  if (topColor) bits.push(`가장 많이 고른 색: ${topColor}`);
+  if (topAction) bits.push(`가장 많이 고른 행동: ${topAction}`);
+  summaryEl.innerHTML = bits.join(' · ');
 
   const dates = Object.keys(byDate).sort().reverse();
   listEl.innerHTML = dates.map(d => {
     const items = byDate[d].map(l => {
       const time = l.t.slice(11, 16);
-      const text = l.colorName ? `${l.whatName} + ${l.colorName}` : l.whatName;
-      return `<div>${time} ${text}</div>`;
+      return `<div>${time} ${logLineText(l)}</div>`;
     }).join('');
     return `<div style="margin-bottom:8px"><strong>${d}</strong>${items}</div>`;
   }).join('');
 }
 
 function logsAsText() {
-  return logs.map(l => {
-    const text = l.colorName ? `${l.whatName} + ${l.colorName}` : l.whatName;
-    return `${l.t.slice(0, 10)} ${l.t.slice(11, 16)} ${text}`;
-  }).join('\n');
+  return logs.map(l => `${l.t.slice(0, 10)} ${l.t.slice(11, 16)} ${logLineText(l)}`).join('\n');
 }
 
 // ---------- 설정 화면 ----------

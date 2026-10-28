@@ -127,7 +127,7 @@ button {
 /* ===== 주문 칸 ===== */
 .order-slots {
   display: flex;
-  gap: 12px;
+  gap: 8px;
 }
 
 .slot {
@@ -295,6 +295,12 @@ button {
   background: linear-gradient(135deg, #E53935, #FB8C00, #FDD835, #43A047, #1E88E5, #8E24AA);
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+.card.color-card.white-card {
+  border: 3px solid #2E3A59;
+}
+.card.color-card.white-card.selected {
+  box-shadow: 0 0 0 3px #2E3A59 inset, 0 0 0 1px #2E3A59;
 }
 
 /* ===== 결과 화면 ===== */

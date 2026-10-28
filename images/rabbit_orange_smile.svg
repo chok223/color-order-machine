@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+<defs>
+  <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#E53935"/>
+    <stop offset="20%" stop-color="#FB8C00"/>
+    <stop offset="40%" stop-color="#FDD835"/>
+    <stop offset="60%" stop-color="#43A047"/>
+    <stop offset="80%" stop-color="#1E88E5"/>
+    <stop offset="100%" stop-color="#8E24AA"/>
+  </linearGradient>
+</defs>
+
+  <ellipse cx="95" cy="55" rx="20" ry="52" fill="#FB8C00" stroke="#2E3A59" stroke-width="5"/>
+  <ellipse cx="145" cy="55" rx="20" ry="52" fill="#FB8C00" stroke="#2E3A59" stroke-width="5"/>
+  <ellipse cx="95" cy="58" rx="10" ry="38" fill="#F7B6C2"/>
+  <ellipse cx="145" cy="58" rx="10" ry="38" fill="#F7B6C2"/>
+  <circle cx="120" cy="145" r="66" fill="#FB8C00" stroke="#2E3A59" stroke-width="6"/>
+  <circle cx="98" cy="135" r="8" fill="#2E3A59"/>
+  <circle cx="142" cy="135" r="8" fill="#2E3A59"/>
+  <ellipse cx="120" cy="156" rx="7" ry="6" fill="#E8899A"/>
+  <circle cx="88" cy="155" r="10" fill="rgb(213,119,0)" opacity="0.5"/>
+  <circle cx="152" cy="155" r="10" fill="rgb(213,119,0)" opacity="0.5"/>
+  <path d="M106 163 Q120 172 134 163" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M98 163 Q120 187 142 163" fill="#fff" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/><circle cx="90" cy="157" r="8" fill="#F7A8B8" opacity="0.7"/><circle cx="150" cy="157" r="8" fill="#F7A8B8" opacity="0.7"/>
+  
+</svg>

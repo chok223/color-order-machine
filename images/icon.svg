@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+<defs>
+  <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#E53935"/>
+    <stop offset="20%" stop-color="#FB8C00"/>
+    <stop offset="40%" stop-color="#FDD835"/>
+    <stop offset="60%" stop-color="#43A047"/>
+    <stop offset="80%" stop-color="#1E88E5"/>
+    <stop offset="100%" stop-color="#8E24AA"/>
+  </linearGradient>
+</defs>
+
+  <rect x="10" y="10" width="220" height="220" rx="40" fill="#2E3A59"/>
+  <circle cx="90" cy="120" r="34" fill="#E53935"/>
+  <circle cx="150" cy="90" r="34" fill="#FDD835"/>
+  <circle cx="150" cy="150" r="34" fill="#1E88E5"/>
+  
+</svg>

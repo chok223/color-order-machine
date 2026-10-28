@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#2E3A59">
+<title>색깔 그림 주문 기계</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="rotateNotice" class="rotate-notice">
+  <div class="rotate-icon">↻</div>
+  <p>패드를 가로로 돌려주세요</p>
+</div>
+
+<div id="app" class="app">
+
+  <header class="topbar">
+    <h1 id="titleLongPress" class="title">색깔 그림 주문 기계</h1>
+    <button id="resetBtn" class="reset-btn" type="button">처음부터</button>
+  </header>
+
+  <main class="main">
+    <section class="left-panel">
+
+      <div class="order-row">
+        <div class="order-slots">
+          <div class="slot" id="slot-what" data-step="what">
+            <span class="slot-label">① 무엇을?</span>
+            <div class="slot-content empty"></div>
+          </div>
+          <div class="slot" id="slot-color" data-step="color">
+            <span class="slot-label">② 무슨 색?</span>
+            <div class="slot-content empty"></div>
+          </div>
+        </div>
+      </div>
+
+      <button id="orderBtn" class="order-btn" type="button" disabled>주문하기</button>
+
+      <div id="pickerArea" class="picker-area">
+        <!-- rows injected by app.js -->
+      </div>
+
+    </section>
+
+    <section class="right-panel">
+      <div class="result-area" id="resultArea">
+        <div class="result-slot prev" id="prevResult">
+          <div class="result-placeholder">이전 그림</div>
+        </div>
+        <div class="result-arrow" id="resultArrow" hidden>→</div>
+        <div class="result-slot new" id="newResult">
+          <div class="result-placeholder">여기에 그림이 나와요</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- 멘토 설정 화면 -->
+<div id="settingsOverlay" class="settings-overlay" hidden>
+  <div class="settings-panel">
+    <div class="settings-header">
+      <h2>멘토 설정</h2>
+      <button id="closeSettingsBtn" class="close-btn" type="button">닫기</button>
+    </div>
+
+    <div class="settings-body">
+
+      <section class="settings-section">
+        <h3>버튼만 누르기 모드</h3>
+        <label class="switch-row">
+          <input type="checkbox" id="simpleModeToggle">
+          <span>켜기 (카드 고르는 곳을 숨기고, 미리 정해둔 카드로 바로 주문)</span>
+        </label>
+        <div id="simplePresetArea" class="simple-preset-area"></div>
+      </section>
+
+      <section class="settings-section">
+        <h3>단계별로 보여줄 카드 고르기</h3>
+        <div id="cardVisibilityArea"></div>
+      </section>
+
+      <section class="settings-section">
+        <h3>소리</h3>
+        <label class="switch-row">
+          <input type="checkbox" id="soundToggle">
+          <span>켜기 (색 이름을 한글·영어로 읽어줌)</span>
+        </label>
+      </section>
+
+      <section class="settings-section">
+        <h3>오늘 기록</h3>
+        <div id="logSummary" class="log-summary"></div>
+        <div id="logList" class="log-list"></div>
+        <div class="log-buttons">
+          <button id="copyLogBtn" class="small-btn" type="button">기록 복사하기</button>
+          <button id="clearLogBtn" class="small-btn danger" type="button">기록 지우기</button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>

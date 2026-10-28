@@ -1,0 +1,32 @@
+{
+  "steps": [
+    {
+      "id": "what",
+      "label": "① 무엇을?",
+      "cards": [
+        { "id": "dog", "name": "강아지" },
+        { "id": "cat", "name": "고양이" },
+        { "id": "rabbit", "name": "토끼" },
+        { "id": "bear", "name": "곰" },
+        { "id": "fish", "name": "물고기" },
+        { "id": "car", "name": "자동차" },
+        { "id": "ball", "name": "공" },
+        { "id": "flower", "name": "꽃" }
+      ]
+    },
+    {
+      "id": "color",
+      "label": "② 무슨 색?",
+      "cards": [
+        { "id": "red", "name": "빨강", "en": "Red", "hex": "#E53935" },
+        { "id": "orange", "name": "주황", "en": "Orange", "hex": "#FB8C00" },
+        { "id": "yellow", "name": "노랑", "en": "Yellow", "hex": "#FDD835" },
+        { "id": "green", "name": "초록", "en": "Green", "hex": "#43A047" },
+        { "id": "blue", "name": "파랑", "en": "Blue", "hex": "#1E88E5" },
+        { "id": "purple", "name": "보라", "en": "Purple", "hex": "#8E24AA" },
+        { "id": "pink", "name": "분홍", "en": "Pink", "hex": "#EC407A" },
+        { "id": "rainbow", "name": "무지개", "en": "Rainbow", "hex": "rainbow" }
+      ]
+    }
+  ]
+}

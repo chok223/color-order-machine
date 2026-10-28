@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <rect x="30" y="140" width="180" height="50" rx="16" fill="#333333" stroke="#2E3A59" stroke-width="6"/>
   <path d="M55 140 Q65 95 110 95 L150 95 Q180 95 190 140 Z" fill="#333333" stroke="#2E3A59" stroke-width="6" stroke-linejoin="round"/>
   <path d="M75 136 Q82 108 112 108 L118 136 Z" fill="#CFE8FA" stroke="#2E3A59" stroke-width="4"/>
@@ -18,6 +19,11 @@
   <circle cx="75" cy="192" r="10" fill="#ddd"/>
   <circle cx="165" cy="192" r="24" fill="#2E3A59"/>
   <circle cx="165" cy="192" r="10" fill="#ddd"/>
-  <circle cx="85" cy="165" r="8" fill="#2E3A59"/><circle cx="155" cy="165" r="8" fill="#2E3A59"/><path d="M110 178 Q120 184 130 178" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="120" cy="178" rx="10" ry="8" fill="#2E3A59"/><ellipse cx="120" cy="226" rx="36" ry="10" fill="#A9754F" stroke="#2E3A59" stroke-width="4"/><circle cx="107" cy="221" r="5" fill="#E53935"/><circle cx="120" cy="218" r="5" fill="#FDD835"/><circle cx="133" cy="221" r="5" fill="#43A047"/>
+  <circle cx="85" cy="165" r="8" fill="#2E3A59"/><circle cx="155" cy="165" r="8" fill="#2E3A59"/><path d="M110 178 Q120 184 130 178" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(120,178)">
+        <rect x="-4" y="-30" width="8" height="26" rx="3" fill="#888" stroke="#2E3A59" stroke-width="3"/>
+        <rect x="-11" y="-36" width="22" height="9" rx="3" fill="#555" stroke="#2E3A59" stroke-width="3"/>
+      </g>
   
 </svg>

@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <circle cx="72" cy="68" r="30" fill="#333333" stroke="#2E3A59" stroke-width="5"/>
   <circle cx="168" cy="68" r="30" fill="#333333" stroke="#2E3A59" stroke-width="5"/>
   <circle cx="72" cy="68" r="13" fill="rgb(133,133,133)"/>
@@ -21,6 +22,7 @@
   <ellipse cx="120" cy="153" rx="10" ry="8" fill="#2E3A59"/>
   <path d="M120 161 Q120 170 106 172" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
   <path d="M120 161 Q120 170 134 172" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
   <circle cx="96" cy="118" r="12" fill="#333333"/><path d="M87 118 Q96 124 105 118" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="144" cy="118" r="12" fill="#333333"/><path d="M135 118 Q144 124 153 118" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
   
 </svg>

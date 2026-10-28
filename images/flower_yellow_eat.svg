@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <line x1="120" y1="150" x2="120" y2="222" stroke="#6FB07F" stroke-width="10" stroke-linecap="round"/>
   <ellipse cx="96" cy="195" rx="22" ry="12" fill="#6FB07F" stroke="#2E3A59" stroke-width="4" transform="rotate(-20 96 195)"/>
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#FDD835" stroke="#2E3A59" stroke-width="4" transform="rotate(0 120 120)"/>
@@ -19,6 +20,8 @@
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#FDD835" stroke="#2E3A59" stroke-width="4" transform="rotate(240 120 120)"/>
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#FDD835" stroke="#2E3A59" stroke-width="4" transform="rotate(300 120 120)"/>
   <circle cx="120" cy="120" r="30" fill="#FDD835" stroke="#2E3A59" stroke-width="5"/>
-  <circle cx="112" cy="115" r="4" fill="#2E3A59"/><circle cx="128" cy="115" r="4" fill="#2E3A59"/><path d="M110 128 Q120 134 130 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="120" cy="128" rx="10" ry="8" fill="#2E3A59"/><ellipse cx="120" cy="226" rx="36" ry="10" fill="#A9754F" stroke="#2E3A59" stroke-width="4"/><circle cx="107" cy="221" r="5" fill="#E53935"/><circle cx="120" cy="218" r="5" fill="#FDD835"/><circle cx="133" cy="221" r="5" fill="#43A047"/>
+  <circle cx="112" cy="115" r="4" fill="#2E3A59"/><circle cx="128" cy="115" r="4" fill="#2E3A59"/><path d="M110 128 Q120 134 130 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M120,110 Q131,126 120,138 Q109,126 120,110 Z" fill="#4FC3F7" stroke="#2E3A59" stroke-width="3"/>
   
 </svg>

@@ -10,15 +10,20 @@
   </linearGradient>
 </defs>
 
-  <polygon points="196,92 233,66 206,120 233,174 196,148" fill="#6A3D8F" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
+  <g>
+  <path d="M194,106 C214,90 230,70 237,60 C227,88 212,104 203,118 C214,132 230,152 238,180 C228,166 210,150 194,134 C197,125 197,114 194,106 Z"
+        fill="#6A3D8F" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
   <ellipse cx="130" cy="120" rx="66" ry="48" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="6"/>
   <ellipse cx="138" cy="146" rx="42" ry="18" fill="#FBE4F3" opacity="0.6"/>
-  <polygon points="130,38 103,82 157,82" fill="#6A3D8F" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
-  <ellipse cx="133" cy="153" rx="20" ry="13" fill="#6A3D8F" stroke="#2E3A59" stroke-width="4" transform="rotate(20 133 153)"/>
+  <path d="M108,80 C116,54 128,38 139,34 C132,52 126,70 120,84 C132,86 146,90 156,98 C140,96 122,92 108,80 Z"
+        fill="#6A3D8F" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M122,146 C134,144 148,148 156,160 C144,160 132,158 122,154 C120,151 120,148 122,146 Z"
+        fill="#6A3D8F" stroke="#2E3A59" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
   <path d="M106 96 Q116 116 106 136" stroke="#2E3A59" stroke-width="3" fill="none" opacity="0.4"/>
   <circle cx="90" cy="106" r="11" fill="#fff" stroke="#2E3A59" stroke-width="3"/>
   <circle cx="87" cy="106" r="5.5" fill="#2E3A59"/>
   <path d="M60 120 Q74 131 90 122" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
   <path d="M78 106 Q90 112 102 106" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
   
 </svg>

@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <circle cx="72" cy="68" r="30" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="5"/>
   <circle cx="168" cy="68" r="30" fill="url(#rainbowGrad)" stroke="#2E3A59" stroke-width="5"/>
   <circle cx="72" cy="68" r="13" fill="#FBE4F3"/>
@@ -21,6 +22,7 @@
   <ellipse cx="120" cy="153" rx="10" ry="8" fill="#2E3A59"/>
   <path d="M120 161 Q120 170 106 172" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
   <path d="M120 161 Q120 170 134 172" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
   
   
 </svg>

@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <line x1="120" y1="150" x2="120" y2="222" stroke="#6FB07F" stroke-width="10" stroke-linecap="round"/>
   <ellipse cx="96" cy="195" rx="22" ry="12" fill="#6FB07F" stroke="#2E3A59" stroke-width="4" transform="rotate(-20 96 195)"/>
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#333333" stroke="#2E3A59" stroke-width="4" transform="rotate(0 120 120)"/>
@@ -19,6 +20,8 @@
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#333333" stroke="#2E3A59" stroke-width="4" transform="rotate(240 120 120)"/>
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#333333" stroke="#2E3A59" stroke-width="4" transform="rotate(300 120 120)"/>
   <circle cx="120" cy="120" r="30" fill="#FDD835" stroke="#2E3A59" stroke-width="5"/>
+  
+  </g>
   
   
 </svg>

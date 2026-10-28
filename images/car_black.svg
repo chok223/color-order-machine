@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <rect x="30" y="140" width="180" height="50" rx="16" fill="#333333" stroke="#2E3A59" stroke-width="6"/>
   <path d="M55 140 Q65 95 110 95 L150 95 Q180 95 190 140 Z" fill="#333333" stroke="#2E3A59" stroke-width="6" stroke-linejoin="round"/>
   <path d="M75 136 Q82 108 112 108 L118 136 Z" fill="#CFE8FA" stroke="#2E3A59" stroke-width="4"/>
@@ -18,6 +19,8 @@
   <circle cx="75" cy="192" r="10" fill="#ddd"/>
   <circle cx="165" cy="192" r="24" fill="#2E3A59"/>
   <circle cx="165" cy="192" r="10" fill="#ddd"/>
+  
+  </g>
   
   
 </svg>

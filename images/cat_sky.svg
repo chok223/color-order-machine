@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <polygon points="72,70 100,95 55,100" fill="#4FC3F7" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
   <polygon points="168,70 140,95 185,100" fill="#4FC3F7" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
   <polygon points="80,78 96,96 70,96" fill="rgb(149,219,250)"/>
@@ -21,6 +22,7 @@
   <path d="M60,150 L30,146 M60,158 L30,158 M180,150 L210,146 M180,158 L210,158"
         stroke="#2E3A59" stroke-width="4" stroke-linecap="round"/>
   <path d="M105 170 Q120 178 135 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
   
   
 </svg>

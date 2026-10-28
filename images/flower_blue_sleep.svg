@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <line x1="120" y1="150" x2="120" y2="222" stroke="#6FB07F" stroke-width="10" stroke-linecap="round"/>
   <ellipse cx="96" cy="195" rx="22" ry="12" fill="#6FB07F" stroke="#2E3A59" stroke-width="4" transform="rotate(-20 96 195)"/>
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#1E88E5" stroke="#2E3A59" stroke-width="4" transform="rotate(0 120 120)"/>
@@ -19,6 +20,8 @@
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#1E88E5" stroke="#2E3A59" stroke-width="4" transform="rotate(240 120 120)"/>
   <ellipse cx="120" cy="80" rx="26" ry="40" fill="#1E88E5" stroke="#2E3A59" stroke-width="4" transform="rotate(300 120 120)"/>
   <circle cx="120" cy="120" r="30" fill="#FDD835" stroke="#2E3A59" stroke-width="5"/>
-  <circle cx="112" cy="115" r="4" fill="#2E3A59"/><circle cx="128" cy="115" r="4" fill="#2E3A59"/><path d="M110 128 Q120 134 130 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="112" cy="115" r="7" fill="#1E88E5"/><path d="M103 115 Q112 121 121 115" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="128" cy="115" r="7" fill="#1E88E5"/><path d="M119 115 Q128 121 137 115" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
+  <circle cx="112" cy="115" r="4" fill="#2E3A59"/><circle cx="128" cy="115" r="4" fill="#2E3A59"/><path d="M110 128 Q120 134 130 128" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="112" cy="115" r="7" fill="#1E88E5"/><path d="M103 115 Q112 121 121 115" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="128" cy="115" r="7" fill="#1E88E5"/><path d="M119 115 Q128 121 137 115" stroke="#2E3A59" stroke-width="4" fill="none" stroke-linecap="round"/><text x="176" y="56" font-size="16" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="192" y="38" font-size="20" fill="#2E3A59" font-family="sans-serif" font-weight="700">z</text><text x="208" y="18" font-size="24" fill="#2E3A59" font-family="sans-serif" font-weight="700">Z</text>
   
 </svg>

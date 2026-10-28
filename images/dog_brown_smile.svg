@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g>
   <ellipse cx="78" cy="78" rx="26" ry="34" fill="rgb(106,83,74)" stroke="#2E3A59" stroke-width="5"/>
   <ellipse cx="162" cy="78" rx="26" ry="34" fill="rgb(106,83,74)" stroke="#2E3A59" stroke-width="5"/>
   <circle cx="120" cy="128" r="72" fill="#8D6E63" stroke="#2E3A59" stroke-width="6"/>
@@ -19,6 +20,7 @@
   <ellipse cx="120" cy="150" rx="9" ry="7" fill="#2E3A59"/>
   <path d="M120 157 Q120 168 105 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
   <path d="M120 157 Q120 168 135 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
   <path d="M98 159 Q120 183 142 159" fill="#fff" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/><circle cx="90" cy="153" r="8" fill="#F7A8B8" opacity="0.7"/><circle cx="150" cy="153" r="8" fill="#F7A8B8" opacity="0.7"/>
   
 </svg>

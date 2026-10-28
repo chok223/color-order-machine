@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g transform="rotate(-5 120 120)">
   <ellipse cx="95" cy="55" rx="20" ry="52" fill="#43A047" stroke="#2E3A59" stroke-width="5"/>
   <ellipse cx="145" cy="55" rx="20" ry="52" fill="#43A047" stroke="#2E3A59" stroke-width="5"/>
   <ellipse cx="95" cy="58" rx="10" ry="38" fill="#F7B6C2"/>
@@ -21,6 +22,7 @@
   <circle cx="88" cy="155" r="10" fill="rgb(57,136,60)" opacity="0.5"/>
   <circle cx="152" cy="155" r="10" fill="rgb(57,136,60)" opacity="0.5"/>
   <path d="M106 163 Q120 172 134 163" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M6 108 L34 108" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M2 130 L30 130" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M8 152 L36 152" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  </g>
+  <path d="M26 100 L58 96" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M20 122 L54 122" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M26 144 L58 148" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
   
 </svg>

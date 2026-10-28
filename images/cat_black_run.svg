@@ -10,6 +10,7 @@
   </linearGradient>
 </defs>
 
+  <g transform="rotate(-5 120 120)">
   <polygon points="72,70 100,95 55,100" fill="#333333" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
   <polygon points="168,70 140,95 185,100" fill="#333333" stroke="#2E3A59" stroke-width="5" stroke-linejoin="round"/>
   <polygon points="80,78 96,96 70,96" fill="rgb(133,133,133)"/>
@@ -21,6 +22,7 @@
   <path d="M60,150 L30,146 M60,158 L30,158 M180,150 L210,146 M180,158 L210,158"
         stroke="#2E3A59" stroke-width="4" stroke-linecap="round"/>
   <path d="M105 170 Q120 178 135 170" stroke="#2E3A59" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M6 108 L34 108" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M2 130 L30 130" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M8 152 L36 152" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  </g>
+  <path d="M26 100 L58 96" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M20 122 L54 122" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/><path d="M26 144 L58 148" stroke="#2E3A59" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
   
 </svg>

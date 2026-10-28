@@ -1,4 +1,4 @@
-const CACHE_NAME = 'color-order-machine-v2';
+const CACHE_NAME = 'color-order-machine-v3';
 
 const CORE_FILES = [
   './',

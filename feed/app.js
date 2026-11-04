@@ -260,3 +260,10 @@ if (load('visited')) {
   later(function () { setState('idle'); setBubble(idleBubble()); }, 2500);
 }
 store('visited', 1);
+
+// 홈 화면 추가/오프라인용 (실패해도 앱 동작에는 영향 없음)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+  });
+}

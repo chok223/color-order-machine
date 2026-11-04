@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>동물 먹이 주기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <h1 id="title">동물 먹이 주기</h1>
+    <div id="belly" aria-label="belly"></div>
+    <button id="reset" type="button">처음부터</button>
+  </header>
+
+  <main id="stage">
+    <section id="foods"></section>
+
+    <section id="zone">
+      <div id="bubble">
+        <div id="symbol"></div>
+        <div id="bubbleText">배고파요</div>
+      </div>
+      <div id="rabbit"></div>
+      <div id="floaters"></div>
+      <div id="stars"></div>
+      <div id="tools">
+        <button id="btnCloset" type="button" aria-label="closet"></button>
+        <button id="btnBg" type="button" aria-label="background"></button>
+        <button id="btnDn" type="button" aria-label="day night"></button>
+      </div>
+    </section>
+  </main>
+
+  <div id="closet"><div id="closetPanel"><div id="closetGrid"></div><div id="closetMsg"></div><button id="closetClose" type="button">닫기</button></div></div>
+
+  <div id="speaker" aria-hidden="true"></div>
+  <div id="rotate">가로로 돌려 주세요</div>
+</div>
+<script src="art.js"></script>
+<script src="core.js"></script>
+<script src="pet.js"></script>
+<script src="env.js"></script>
+<script src="play.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

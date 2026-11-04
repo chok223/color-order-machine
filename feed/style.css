@@ -135,10 +135,13 @@ html, body {
 @keyframes sniff { 0%,100% { transform: scale(1); } 30%,70% { transform: scale(1.5) translateY(-2px); } }
 
 /* nose tap: achoo face (eyes squeezed, mouth open, small dip) */
-.rb.achoo .eyes-open, .rb.yawn .eyes-open { display: none; }
-.rb.achoo .eyes-sleep, .rb.yawn .eyes-sleep { display: inline; }
-.rb.achoo .m-idle, .rb.yawn .m-idle, .rb.yawn .m-sleep, .rb.yawn .zzz { display: none; }
-.rb.achoo .m-open, .rb.yawn .m-open { display: inline; }
+/* yawn / achoo have their own eyes and mouth. While active, hide every other expression
+   (!important so no state rule such as sleep/happy/open can show a second face on top). */
+.rb .eyes-yawn, .rb .eyes-achoo { display: none; }
+.rb.achoo .eyes-open, .rb.achoo .eyes-happy, .rb.achoo .eyes-sleep, .rb.achoo .mouth, .rb.achoo .zzz,
+.rb.yawn .eyes-open, .rb.yawn .eyes-happy, .rb.yawn .eyes-sleep, .rb.yawn .mouth, .rb.yawn .zzz { display: none !important; }
+.rb.yawn .eyes-yawn, .rb.achoo .eyes-achoo { display: inline !important; }
+.rb.yawn .m-yawn, .rb.achoo .m-yawn { display: inline !important; }
 .rb.achoo { animation: achoo .8s ease-in-out; }
 @keyframes achoo { 0%,100% { transform: translateY(0); } 35% { transform: translateY(5px) scaleY(.97); } 60% { transform: translateY(-4px); } }
 

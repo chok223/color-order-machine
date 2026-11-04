@@ -98,12 +98,15 @@ var SVG = {
     '<g class="eyes-happy"><path d="M96 180 Q112 160 128 180 M172 180 Q188 160 204 180" fill="none" stroke="' + INK + '" stroke-width="7" stroke-linecap="round"/></g>' +
     '<g class="eyes-sleep"><path d="M96 176 Q112 192 128 176 M172 176 Q188 192 204 176" fill="none" stroke="' + INK + '" stroke-width="7" stroke-linecap="round"/>' +
     '<path d="M100 188 L94 194 M124 188 L130 194 M176 188 L170 194 M200 188 L206 194" stroke="' + INK + '" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>' +
-    '<circle class="nose" cx="150" cy="212" r="26" fill="transparent"/>' +
+    '<g class="eyes-yawn"><path d="M96 178 Q112 192 128 178 M172 178 Q188 192 204 178" fill="none" stroke="' + INK + '" stroke-width="7" stroke-linecap="round"/></g>' +
+  '<g class="eyes-achoo"><path d="M98 166 L126 178 L98 190 M202 166 L174 178 L202 190" fill="none" stroke="' + INK + '" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>' +
+  '<circle class="nose" cx="150" cy="212" r="26" fill="transparent"/>' +
     '<path class="nose-vis" d="M140 208 Q150 200 160 208 Q150 220 140 208Z" fill="#ff7a9a" stroke="' + INK + '" stroke-width="4" stroke-linejoin="round"/>' +
     '<g class="mouth m-idle"><path d="M150 218 Q150 232 134 232 M150 218 Q150 232 166 232" fill="none" stroke="' + INK + '" stroke-width="5" stroke-linecap="round"/></g>' +
     '<g class="mouth m-open"><ellipse cx="150" cy="238" rx="26" ry="24" fill="#8a2a3a" stroke="' + INK + '" stroke-width="5"/><ellipse cx="150" cy="250" rx="14" ry="9" fill="#ff7a8a"/></g>' +
     '<g class="mouth m-chew"><ellipse cx="150" cy="238" rx="22" ry="20" fill="#8a2a3a" stroke="' + INK + '" stroke-width="5"/></g>' +
     '<g class="mouth m-happy"><path d="M120 224 Q150 262 180 224Z" fill="#8a2a3a" stroke="' + INK + '" stroke-width="5" stroke-linejoin="round"/><path d="M134 242 Q150 254 166 242 Q150 236 134 242Z" fill="#ff7a8a"/></g>' +
+    '<g class="mouth m-yawn"><ellipse cx="150" cy="244" rx="17" ry="20" fill="#8a2a3a" stroke="' + INK + '" stroke-width="5"/><ellipse cx="150" cy="256" rx="10" ry="6" fill="#ff7a8a"/></g>' +
     ACC_ALL +
     '<g class="mouth m-sleep"><ellipse cx="150" cy="236" rx="9" ry="7" fill="#8a2a3a" stroke="' + INK + '" stroke-width="4"/></g>' +
     '<g class="zzz"><text x="232" y="110" font-size="40" font-weight="bold" fill="#2f7bff" stroke="' + INK + '" stroke-width="1.5">Z</text>' +

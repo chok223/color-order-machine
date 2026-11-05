@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>빛나는 칸 따라 누르기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <h1 id="title">빛나는 칸 따라 누르기</h1>
+    <div id="hearts" aria-hidden="true"></div>
+    <button id="reset" type="button">처음부터</button>
+  </header>
+
+  <main id="stage">
+    <aside id="side">
+      <div id="level"></div>
+      <div id="status" data-state="idle">
+        <svg id="eye" viewBox="0 0 120 80" aria-hidden="true">
+          <path d="M8 40 Q60 -8 112 40 Q60 88 8 40 Z" fill="#fff" stroke="#5a3a1a" stroke-width="6" stroke-linejoin="round"/>
+          <circle cx="60" cy="40" r="19" fill="#43A047" stroke="#5a3a1a" stroke-width="5"/>
+          <circle cx="60" cy="40" r="8" fill="#5a3a1a"/>
+          <circle cx="66" cy="33" r="4" fill="#fff"/>
+        </svg>
+        <svg id="finger" viewBox="0 0 100 120" aria-hidden="true">
+          <path d="M38 8 Q50 0 62 8 L62 58 L80 62 Q94 66 92 84 L86 108 Q84 116 76 116 L40 116 Q30 116 26 108 L10 76 Q6 66 16 62 Q24 60 30 68 L38 78 Z"
+                fill="#ffd9a8" stroke="#5a3a1a" stroke-width="6" stroke-linejoin="round"/>
+        </svg>
+        <div id="statusText"></div>
+      </div>
+      <div id="dots"></div>
+    </aside>
+
+    <section id="boardWrap">
+      <div id="board"></div>
+      <div id="celebrate" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="50" fill="#FDD835" stroke="#5a3a1a" stroke-width="6"/>
+          <circle cx="42" cy="50" r="6" fill="#5a3a1a"/><circle cx="78" cy="50" r="6" fill="#5a3a1a"/>
+          <path d="M34 70 Q60 100 86 70" fill="none" stroke="#5a3a1a" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <svg class="bigheart" viewBox="0 0 100 90">
+          <path d="M50 84 C10 56 4 30 22 16 C34 8 46 14 50 24 C54 14 66 8 78 16 C96 30 90 56 50 84 Z" fill="#ff5a6e" stroke="#5a3a1a" stroke-width="6" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <button id="retry" type="button" hidden>처음부터 다시하기</button>
+      <div id="win" hidden>성공했어요!</div>
+      <div id="modes">
+        <button id="modeFollow" class="modeBtn" type="button">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="22" y="22" width="56" height="56" rx="12" fill="#FDD835" stroke="#5a3a1a" stroke-width="6"/><path d="M50 32 L56 46 L71 47 L59 57 L63 71 L50 63 L37 71 L41 57 L29 47 L44 46 Z" fill="#fff" stroke="#5a3a1a" stroke-width="3" stroke-linejoin="round"/></svg>
+          <span>따라 누르기</span>
+        </button>
+        <button id="modeMemory" class="modeBtn" type="button">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="20" cy="50" r="13" fill="#E53935" stroke="#5a3a1a" stroke-width="5"/><circle cx="50" cy="50" r="13" fill="#1E88E5" stroke="#5a3a1a" stroke-width="5"/><circle cx="80" cy="50" r="13" fill="#43A047" stroke="#5a3a1a" stroke-width="5"/></svg>
+          <span>기억하기</span>
+        </button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div id="rotate">가로로 돌려 주세요</div>
+
+<div id="settings" hidden>
+  <div class="panel">
+    <h2>멘토 설정</h2>
+    <div class="row"><span>기억하기 최대 길이</span>
+      <div class="numWrap"><input id="maxLenInput" type="number" min="1" max="99" inputmode="numeric" placeholder="제한 없음"> <small>비우면 제한 없음</small></div></div>
+    <div class="row"><span>속도</span>
+      <div class="seg" data-key="speed">
+        <button type="button" data-v="normal">보통</button>
+        <button type="button" data-v="slow">느리게</button>
+      </div></div>
+    <div class="row"><span>칸 이름 표시</span>
+      <div class="seg" data-key="names">
+        <button type="button" data-v="on">켜기</button>
+        <button type="button" data-v="off">끄기</button>
+      </div></div>
+    <button id="closeSettings" type="button">닫기</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

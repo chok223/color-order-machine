@@ -1,7 +1,7 @@
 {
   "name": "빛나는 칸 따라 누르기",
   "short_name": "기억력 게임",
-  "id": "./index.html",
+  "id": "/color-order-machine/memory/",
   "start_url": "./index.html",
   "scope": "./",
   "display": "fullscreen",

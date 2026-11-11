@@ -65,9 +65,12 @@ html, body {
 #panel .big.plain { background: #fff; flex: 0 0 140px; }
 #panel .big:active { background: #ffd666; }
 #panel .status { min-height: 26px; margin: 10px 0 6px; font-size: 18px; font-weight: 700; }
-#panelList { overflow-y: auto; touch-action: pan-y; display: flex; flex-wrap: wrap; gap: 12px; padding: 4px; -webkit-overflow-scrolling: touch; }
-#panelList .empty { margin: 8px 0; font-size: 16px; opacity: .7; }
-#panelList .card { position: relative; width: 160px; height: 120px; border: 4px solid #5a3a1a; border-radius: 16px; overflow: hidden; background: #fff; }
-#panelList .card canvas { display: block; width: 100%; height: 100%; }
-#panelList .del { position: absolute; right: 4px; top: 4px; min-width: 48px; height: 48px; padding: 0 8px; border: 3px solid #5a3a1a; border-radius: 24px; background: #fff; color: #5a3a1a; font: inherit; font-size: 20px; font-weight: 700; touch-action: manipulation; }
-#panelList .del.sure { background: #e53935; color: #fff; }
+#panelBody { overflow-y: auto; touch-action: pan-y; padding: 4px; -webkit-overflow-scrolling: touch; }
+#panelBody h2 { margin: 10px 0 8px; font-size: 18px; }
+#panelBody .grid { display: flex; flex-wrap: wrap; gap: 12px; }
+#panelBody .commit { width: 100%; margin: 12px 0 8px; background: #a5e6a0; }
+#panelBody .restore { width: 100%; margin: 14px 0 4px; min-height: 52px; font-size: 18px; flex: none; }
+#panel .card { position: relative; width: 160px; height: 120px; border: 4px solid #5a3a1a; border-radius: 16px; overflow: hidden; background: #fff; }
+#panel .card canvas { display: block; width: 100%; height: 100%; }
+#panel .del { position: absolute; right: 4px; top: 4px; min-width: 48px; height: 48px; padding: 0 8px; border: 3px solid #5a3a1a; border-radius: 24px; background: #fff; color: #5a3a1a; font: inherit; font-size: 20px; font-weight: 700; touch-action: manipulation; }
+#panel .del.sure { background: #e53935; color: #fff; }

@@ -44,13 +44,22 @@
 <section id="panel" hidden>
   <div class="box">
     <h1>그림 관리 (멘토용)</h1>
-    <p class="hint">패드의 사진이나 그림 파일을 골라 추가할 수 있습니다. 추가한 그림은 이 패드에만 저장됩니다.</p>
+    <p class="hint">1) 그림을 고르고  2) "추가하기"를 눌러야 저장됩니다. 그림 위 ✕를 두 번 누르면 지워집니다. 추가한 그림은 이 패드에만 저장됩니다.</p>
     <div class="row">
-      <button id="btnAdd" type="button" class="big">＋ 그림 추가</button>
+      <button id="btnAdd" type="button" class="big">＋ 그림 고르기</button>
       <button id="btnClose" type="button" class="big plain">닫기</button>
     </div>
     <p id="panelStatus" class="status"></p>
-    <div id="panelList"></div>
+    <div id="panelBody">
+      <div id="stagedWrap" hidden>
+        <h2>추가할 그림 (아직 저장 안 됨)</h2>
+        <div id="stagedList" class="grid"></div>
+        <button id="btnCommit" type="button" class="big commit">추가하기</button>
+      </div>
+      <h2>지금 있는 그림</h2>
+      <div id="panelList" class="grid"></div>
+      <button id="btnRestore" type="button" class="big plain restore" hidden>지운 기본 그림 되돌리기</button>
+    </div>
   </div>
   <input id="fileInput" type="file" accept="image/*" multiple hidden>
 </section>

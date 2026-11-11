@@ -1,6 +1,6 @@
 // 색칠 그림 전용 서비스 워커 (다른 프로그램과 캐시를 따로 씀)
 // 저장된 파일을 먼저 보여 주므로 인터넷이 없거나 불안정해도 바로 열린다. 뒤에서 몰래 최신으로 갱신한다.
-const CACHE_NAME = 'coloring-v2';
+const CACHE_NAME = 'coloring-v3';
 const CORE_FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.json', 'icon.svg', 'icon-192.png', 'icon-512.png', 'images/list.json'];
 
 self.addEventListener('install', (e) => {

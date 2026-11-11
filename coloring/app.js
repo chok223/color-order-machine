@@ -415,8 +415,11 @@ var FINISH_MS = 4500;           // 마지막 터치 후 전체가 칠해지는 �
       userLoaded = arr; refreshPictures();
     });
   }
+  var hidden = [];     // 멘토가 지운 기본 그림 이름 (되돌리기 가능)
+  try { hidden = JSON.parse(localStorage.getItem('coloring-hidden') || '[]') || []; } catch (e) { hidden = []; }
+  function saveHidden() { try { localStorage.setItem('coloring-hidden', JSON.stringify(hidden)); } catch (e) {} }
   function refreshPictures() {
-    pictures = SAMPLES.concat(fileLoaded, userLoaded);
+    pictures = SAMPLES.concat(fileLoaded, userLoaded).filter(function (p) { return hidden.indexOf(p.name) < 0; });
     buildPicker();
     if (!panel.hidden) buildPanelList();
   }
@@ -689,47 +692,88 @@ var FINISH_MS = 4500;           // 마지막 터치 후 전체가 칠해지는 �
   holdButton($('btnHome'), showPicker);
 
   // ---------- 멘토 관리 화면: 그림 추가/삭제 (2초 길게 눌러서 열기) ----------
-  var statusEl = $('panelStatus'), listEl = $('panelList'), pendingDel = 0, pendingTimer = 0;
+  var statusEl = $('panelStatus'), listEl = $('panelList'), stagedEl = $('stagedList'), stagedWrap = $('stagedWrap');
+  var btnCommit = $('btnCommit'), btnRestore = $('btnRestore');
+  var staged = [];                 // 고르기만 하고 아직 저장하지 않은 그림 { blob, url, draw, name }
+  var pendingKey = null, pendingTimer = 0;
   function say(t) { statusEl.textContent = t || ''; }
-  function buildPanelList() {
-    listEl.innerHTML = '';
-    if (!userLoaded.length) { var e = document.createElement('p'); e.className = 'empty'; e.textContent = '추가한 그림이 없습니다.'; listEl.appendChild(e); return; }
-    userLoaded.forEach(function (u) {
-      var card = document.createElement('div'); card.className = 'card';
-      var c = newCanvas(200, 150); u.draw(c.getContext('2d'), 200, 150); card.appendChild(c);
-      var del = document.createElement('button'); del.type = 'button'; del.className = 'del'; del.textContent = '✕'; del.setAttribute('aria-label', '삭제');
-      del.addEventListener('click', function () {
-        if (pendingDel !== u.id) {                       // 첫 번째 누름: '삭제?'로 바뀜
-          clearTimeout(pendingTimer); pendingDel = u.id;
-          listEl.querySelectorAll('.del').forEach(function (b) { b.classList.remove('sure'); b.textContent = '✕'; });
-          del.classList.add('sure'); del.textContent = '삭제?';
-          pendingTimer = setTimeout(function () { pendingDel = 0; del.classList.remove('sure'); del.textContent = '✕'; }, 3000);
-          return;
-        }
-        pendingDel = 0; clearTimeout(pendingTimer);
-        idbDo('readwrite', function (s) { return s.delete(u.id); }).then(reloadUser).then(function () { say('지웠습니다.'); }).catch(function () { say('지우지 못했습니다.'); });
-      });
-      card.appendChild(del); listEl.appendChild(card);
+  function cardFor(p, onDel, key) {
+    var card = document.createElement('div'); card.className = 'card';
+    var c = newCanvas(200, 150); p.draw(c.getContext('2d'), 200, 150); card.appendChild(c);
+    var del = document.createElement('button'); del.type = 'button'; del.className = 'del'; del.textContent = '✕'; del.setAttribute('aria-label', '삭제');
+    del.addEventListener('click', function () {
+      if (pendingKey !== key) {                        // 첫 번째 누름: '삭제?'로 바뀌고, 한 번 더 눌러야 지워짐
+        clearTimeout(pendingTimer); pendingKey = key;
+        panel.querySelectorAll('.del').forEach(function (b) { b.classList.remove('sure'); b.textContent = '✕'; });
+        del.classList.add('sure'); del.textContent = '삭제?';
+        pendingTimer = setTimeout(function () { pendingKey = null; del.classList.remove('sure'); del.textContent = '✕'; }, 3000);
+        return;
+      }
+      pendingKey = null; clearTimeout(pendingTimer); onDel();
     });
+    card.appendChild(del); return card;
   }
-  function openPanel() { say(''); panel.hidden = false; buildPanelList(); }
-  function closePanel() { panel.hidden = true; pendingDel = 0; clearTimeout(pendingTimer); }
+  function buildPanelList() {
+    // 추가 대기 중인 그림
+    stagedEl.innerHTML = '';
+    stagedWrap.hidden = !staged.length;
+    staged.forEach(function (s) {
+      stagedEl.appendChild(cardFor(s, function () { URL.revokeObjectURL(s.url); staged.splice(staged.indexOf(s), 1); say(''); buildPanelList(); }, s));
+    });
+    btnCommit.textContent = '추가하기 (' + staged.length + '장)';
+    // 지금 있는 그림 (기본 그림 + images 폴더 + 추가한 그림)
+    listEl.innerHTML = '';
+    pictures.forEach(function (p) {
+      listEl.appendChild(cardFor(p, function () { deletePicture(p); }, p));
+    });
+    btnRestore.hidden = !hidden.length;
+  }
+  function deletePicture(p) {
+    if (pictures.length <= 1) { say('마지막 그림 한 장은 지울 수 없습니다.'); return; }
+    if (p.id) {                                          // 앱에서 추가한 그림: 저장소에서 완전히 지움
+      idbDo('readwrite', function (s) { return s.delete(p.id); }).then(reloadUser).then(function () { say('지웠습니다.'); }).catch(function () { say('지우지 못했습니다.'); });
+    } else {                                             // 기본 그림: 숨김 (되돌릴 수 있음)
+      hidden.push(p.name); saveHidden(); refreshPictures(); say('지웠습니다. (아래 버튼으로 되돌릴 수 있습니다)');
+    }
+  }
+  function clearStaged() { staged.forEach(function (s) { URL.revokeObjectURL(s.url); }); staged = []; }
+  function openPanel() { say(''); clearStaged(); panel.hidden = false; buildPanelList(); }
+  function closePanel() { panel.hidden = true; clearStaged(); pendingKey = null; clearTimeout(pendingTimer); }
   holdButton(btnMentor, openPanel);
   $('btnClose').addEventListener('click', closePanel);
   $('btnAdd').addEventListener('click', function () { fileInput.value = ''; fileInput.click(); });
+  btnRestore.addEventListener('click', function () { hidden = []; saveHidden(); refreshPictures(); say('지운 기본 그림을 모두 되돌렸습니다.'); });
+
+  // 1단계: 그림 고르기 → '추가할 그림'에 올려만 둔다 (아직 저장 안 됨)
   fileInput.addEventListener('change', function () {
     var files = Array.prototype.slice.call(fileInput.files || []);
     if (!files.length) return;
-    say('추가하는 중…');
-    var ok = 0, bad = 0;
+    say('불러오는 중…');
+    var bad = 0;
     files.reduce(function (p, f) {
       return p.then(function () {
-        return shrink(f).then(function (b) { return idbDo('readwrite', function (s) { return s.add({ blob: b, name: f.name, added: Date.now() }); }); })
-          .then(function () { ok++; }).catch(function () { bad++; });
+        return shrink(f).then(function (b) {
+          var url = URL.createObjectURL(b);
+          return loadImage(url).then(function (im) { staged.push({ name: f.name, blob: b, url: url, draw: drawFile(im) }); });
+        }).catch(function () { bad++; });
       });
-    }, Promise.resolve()).then(reloadUser).then(function () {
-      say(ok + '장 추가했습니다.' + (bad ? ' (' + bad + '장은 그림 파일이 아니라서 건너뜀)' : ''));
-      if (ok && navigator.storage && navigator.storage.persist) { try { navigator.storage.persist(); } catch (e) {} }
+    }, Promise.resolve()).then(function () {
+      say((staged.length ? '아래 "추가하기"를 눌러야 저장됩니다.' : '') + (bad ? ' (' + bad + '장은 그림 파일이 아니라서 건너뜀)' : ''));
+      buildPanelList();
+    });
+  });
+  // 2단계: '추가하기'를 눌러야 진짜 저장
+  btnCommit.addEventListener('click', function () {
+    if (!staged.length) return;
+    var list = staged.slice(), n = 0;
+    say('저장하는 중…');
+    list.reduce(function (p, s) {
+      return p.then(function () { return idbDo('readwrite', function (st) { return st.add({ blob: s.blob, name: s.name, added: Date.now() }); }).then(function () { n++; }).catch(function () {}); });
+    }, Promise.resolve()).then(function () {
+      clearStaged(); return reloadUser();
+    }).then(function () {
+      say(n + '장 추가했습니다.');
+      if (n && navigator.storage && navigator.storage.persist) { try { navigator.storage.persist(); } catch (e) {} }
     });
   });
 
@@ -768,7 +812,7 @@ var FINISH_MS = 4500;           // 마지막 터치 후 전체가 칠해지는 �
     document.addEventListener(t, function (e) { e.preventDefault(); });
   });
   document.addEventListener('touchmove', function (e) {
-    if (e.target.closest && e.target.closest('#panelList')) return;   // 관리 화면의 목록은 밀어서 볼 수 있게
+    if (e.target.closest && e.target.closest('#panelBody')) return;   // 관리 화면의 목록은 밀어서 볼 수 있게
     e.preventDefault();
   }, { passive: false });
   document.addEventListener('touchstart', function (e) { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });

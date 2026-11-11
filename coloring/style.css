@@ -1,0 +1,73 @@
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  margin: 0; height: 100%; position: fixed; inset: 0; width: 100%; overflow: hidden;
+  overscroll-behavior: none; touch-action: none;
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+  background: #fff6d6; color: #5a3a1a;
+}
+[hidden] { display: none !important; }
+
+/* ---------- 시작 화면 ---------- */
+#picker {
+  position: fixed; inset: 0; background: #fff6d6;
+  padding: max(14px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+  display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 16px;
+}
+.thumb {
+  padding: 0; margin: 0; border: 6px solid #5a3a1a; border-radius: 30px; background: #fff;
+  overflow: hidden; touch-action: manipulation; flex: none;
+  transition: transform .18s ease;
+}
+.thumb:active { transform: scale(.96); }
+.thumb canvas { display: block; width: 100%; height: 100%; pointer-events: none; }
+
+/* ---------- 색칠 화면 ---------- */
+#stage { position: fixed; inset: 0; background: #fff6d6; overflow: hidden; }
+#paint { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; transform-origin: 50% 50%; }
+#paint.pulse { animation: pulse 1.8s ease-in-out 1; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.035); } }
+
+/* 멘토 전용 버튼: 구석에 작고 연하게 */
+.mentor {
+  position: absolute; width: 52px; height: 52px; padding: 0; border: 0; border-radius: 50%;
+  background: rgba(255,255,255,.45); color: #5a3a1a; opacity: .4; touch-action: none; z-index: 5;
+}
+#btnRestart { left: max(8px, env(safe-area-inset-left)); top: max(8px, env(safe-area-inset-top)); }
+#btnHome { right: max(8px, env(safe-area-inset-right)); top: max(8px, env(safe-area-inset-top)); }
+.mentor svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.mentor .icon { inset: 12px; width: 28px; height: 28px; }
+.mentor .ring circle { fill: none; stroke: #5a3a1a; stroke-width: 3; stroke-linecap: round; opacity: 0;
+  stroke-dasharray: 132; stroke-dashoffset: 132; transform: rotate(-90deg); transform-origin: 50% 50%; }
+.mentor.holding { opacity: .8; }
+.mentor.holding .ring circle { opacity: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 2s linear; }
+
+/* 완성 후 나타나는 버튼 */
+#btnDone {
+  position: absolute; left: 50%; bottom: max(28px, env(safe-area-inset-bottom)); transform: translateX(-50%);
+  width: 120px; height: 120px; padding: 0; border: 6px solid #5a3a1a; border-radius: 50%;
+  background: #fff; color: #5a3a1a; z-index: 6; opacity: 0; animation: fadein 1.2s ease forwards;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2); touch-action: manipulation;
+}
+#btnDone svg { width: 62px; height: 62px; }
+#btnDone:active { background: #ffe9a8; }
+@keyframes fadein { to { opacity: 1; } }
+
+/* ---------- 멘토 관리 화면 (시작 화면의 + 버튼, 그림 추가/삭제) ---------- */
+#btnMentor { position: fixed; right: max(8px, env(safe-area-inset-right)); bottom: max(8px, env(safe-area-inset-bottom)); z-index: 7; width: 44px; height: 44px; }
+#btnMentor .icon { inset: 9px; width: 26px; height: 26px; }
+#panel { position: fixed; inset: 0; z-index: 20; background: rgba(90, 58, 26, .55); display: flex; align-items: center; justify-content: center; padding: 16px; touch-action: manipulation; }
+#panel .box { background: #fff6d6; border: 6px solid #5a3a1a; border-radius: 28px; width: min(880px, 100%); max-height: 100%; display: flex; flex-direction: column; padding: 20px 24px; }
+#panel h1 { margin: 0 0 6px; font-size: 24px; }
+#panel .hint { margin: 0 0 12px; font-size: 16px; line-height: 1.4; }
+#panel .row { display: flex; gap: 12px; }
+#panel .big { flex: 1; min-height: 64px; font: inherit; font-size: 22px; font-weight: 700; color: #5a3a1a; background: #ffe9a8; border: 4px solid #5a3a1a; border-radius: 18px; touch-action: manipulation; }
+#panel .big.plain { background: #fff; flex: 0 0 140px; }
+#panel .big:active { background: #ffd666; }
+#panel .status { min-height: 26px; margin: 10px 0 6px; font-size: 18px; font-weight: 700; }
+#panelList { overflow-y: auto; touch-action: pan-y; display: flex; flex-wrap: wrap; gap: 12px; padding: 4px; -webkit-overflow-scrolling: touch; }
+#panelList .empty { margin: 8px 0; font-size: 16px; opacity: .7; }
+#panelList .card { position: relative; width: 160px; height: 120px; border: 4px solid #5a3a1a; border-radius: 16px; overflow: hidden; background: #fff; }
+#panelList .card canvas { display: block; width: 100%; height: 100%; }
+#panelList .del { position: absolute; right: 4px; top: 4px; min-width: 48px; height: 48px; padding: 0 8px; border: 3px solid #5a3a1a; border-radius: 24px; background: #fff; color: #5a3a1a; font: inherit; font-size: 20px; font-weight: 700; touch-action: manipulation; }
+#panelList .del.sure { background: #e53935; color: #fff; }

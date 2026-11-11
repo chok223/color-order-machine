@@ -1,0 +1,39 @@
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  margin: 0; height: 100%; position: fixed; inset: 0; width: 100%; overflow: hidden;
+  overscroll-behavior: none; touch-action: none;
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+  background: #fff6d6;
+  color: #5a3a1a;
+}
+
+/* 화면을 꽉 채우는 3x3 (가로·세로 모두) */
+#board {
+  position: fixed; inset: 0;
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); gap: 12px;
+}
+@media (orientation: portrait) { #board { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); } }
+
+.cell {
+  position: relative; min-width: 0; min-height: 0; padding: 0; margin: 0;
+  border-radius: 22px; border: 5px solid #5a3a1a; background: var(--c);
+  overflow: hidden; touch-action: none; font: inherit; container-type: size;
+  transition: transform .35s ease, filter .35s ease, box-shadow .35s ease;   /* 원본과 같은 속도 */
+}
+/* 평소엔 연하게: 흰 덮개 */
+.cell .veil { position: absolute; inset: 0; background: #fff; opacity: .62; transition: opacity .35s ease; pointer-events: none; }
+.cell .emoji {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-size: 48cqmin; line-height: 1; pointer-events: none;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  transform: scale(.4); opacity: 0;   /* 평소엔 숨김 */
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+/* 눌렀을 때: 원본의 '빛나는 칸'과 같은 모양 */
+.cell.lit { transform: scale(1.08); z-index: 3; filter: saturate(1.4) brightness(1.08);
+  box-shadow: 0 0 0 6px #fff, 0 0 28px 10px var(--c); }
+.cell.lit .veil { opacity: 0; }
+.cell.lit .emoji { opacity: 1; transform: scale(1); }   /* 눌리면 별처럼 나타남 */
